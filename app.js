@@ -30,6 +30,12 @@ window.onbeforeunload = function () {
     leavePage();
 };
 
+// (function (){
+//     document.getElementById('send-data').addEventListener('click', function (){
+//         leavePage();
+//     });
+// })();
+
 function leavePage() {
     const request = new XMLHttpRequest();
     const url = "http://metrabit/save_data";

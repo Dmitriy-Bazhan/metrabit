@@ -42,13 +42,27 @@ class Api
 
         unset($data->removeTasks);
 
+        $query = "SELECT id FROM tasks";
+        $result = $connect->prepare($query);
+        $result->execute();
+        foreach ($result->fetchAll(\PDO::FETCH_ASSOC) as $id) {
+            $ids[] = $id['id'];
+        }
+
         foreach ($data as $key => $value) {
 
-            $query = "INSERT INTO tasks(id,description,taskdate,success) VALUES (?,?,?,?)";
-            $param = [$key, $value->description, $value->time, $value->success];
-            $result = $connect->prepare($query);
-            $result->execute($param);
+                if(in_array($key, $ids)) {
+                    $query = "UPDATE tasks SET description = ?,taskdate = ?,success = ? WHERE id = $key";
+                    $param = [$value->description, $value->time, $value->success];
+                    $result = $connect->prepare($query);
+                    $result->execute($param);
 
+                }else {
+                    $query = "INSERT INTO tasks(id,description,taskdate,success) VALUES (?,?,?,?)";
+                    $param = [$key, $value->description, $value->time, $value->success];
+                    $result = $connect->prepare($query);
+                    $result->execute($param);
+                }
         }
         echo json_encode(['message' => $param]);
     }
