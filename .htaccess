@@ -1,0 +1,19 @@
+# more information here:
+# https://vps.ua/wiki/htaccess/
+# https://hostiq.ua/wiki/htaccess/
+# https://beget.com/ru/articles/htaccess
+# https://ru.wikibooks.org/wiki/%D0%94%D0%B8%D1%80%D0%B5%D0%BA%D1%82%D0%B8%D0%B2%D1%8B_.htaccess
+
+Options +FollowSymLinks
+Options -Indexes
+DirectoryIndex index.php
+
+#php_flag  log_errors on
+#php_value error_log  C:\OSPanel\domains\php-course.local\lesson12\error.log
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php?my_uri=$1 [QSA]
+#RewriteRule ^ %1 [L,R=301]
+RewriteRule ^ index.php [L]

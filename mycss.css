@@ -1,0 +1,162 @@
+body {
+    background: #e5e5e5;
+}
+
+.main-block {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.main-title {
+    font-family: Poppins, sans-serif;
+    margin: 2% 0 2% 0;
+    color: white;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.block-under-header {
+    display: inline-block;
+    width: 45%;
+    background: #ffffff;
+}
+
+.block-under-body {
+    display: inline-block;
+    width: 45%;
+    background: #889dea;
+}
+
+.blank-header, .blank-body {
+    display: inline-block;
+    background: #889dea;
+    width: 100%;
+}
+
+.blank-header {
+    border-radius: 0 0 25px 0;
+}
+
+.blank-body {
+    border-radius: 25px 0 0 0;
+    background: #ffffff;
+    padding-top: 10%;
+}
+
+.block-with-tasks-info-status, .right-block-with-tasks-info-status, .left-block-with-tasks-info-status {
+    /*border:solid 1px black;*/
+    display: inline-block;
+    width: 15%;
+    text-align: center;
+}
+
+.left-block-with-tasks-info-status {
+    margin-right: 22%;
+
+}
+
+.right-block-with-tasks-info-status {
+    margin-left: 22%;
+    margin-bottom: 7%;
+}
+
+.scope-title, .active-title, .successful-title {
+    display: block;
+    font-family: Poppins, sans-serif;
+    color: white;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+}
+
+.score {
+    display: block;
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    color: white;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 56px;
+}
+
+.rectangle {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+
+    background: #88EAA9;
+    border-radius: 11px;
+    transform: rotate(45deg);
+}
+
+.inner-rectangle {
+    transform: rotate(-45deg);
+}
+
+.line-in-list-of-tasks {}
+
+.checkbox-block, .description-block, .edit-block, .remove-block {
+    display: inline-block;
+}
+.checkbox-block {
+
+}
+
+.button-edit, .button-remove {
+    border: none;
+    background: transparent;
+}
+
+.description-block{
+    margin-right: 10%;
+    width: 65%;
+    text-align: left;
+}
+
+.description-style, .description-style-opacity {
+    font-family: Poppins, sans-serif;
+    font-style:  normal;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.description-style-opacity {
+    opacity: 0.7;
+}
+
+.edit-block {
+    /*margin-left: 10%;*/
+}
+
+textarea {
+    outline: none;
+    resize: none;
+    overflow: hidden;
+    border:none;
+    width:90%;
+    height: auto;
+}
+
+.time {
+    margin-right: 70%;
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #889DEA;
+}
+
+.alert-task-message {
+    font-family: Poppins, sans-serif;
+    font-style:  normal;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+    color: red;
+}
+
+#form {
+    margin-bottom: 5%;
+}
