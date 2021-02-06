@@ -64,7 +64,7 @@ class Api
                     $result->execute($param);
                 }
         }
-        echo json_encode(['message' => $param]);
+        echo json_encode(['message' => 'Ok']);
     }
 
     private function connect()
