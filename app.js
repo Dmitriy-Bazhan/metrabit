@@ -167,9 +167,7 @@ function createNewTask() {
     window.storage[lastId].description = '';
     window.storage[lastId].time = day + ' ' + month + ' ' + year;
     window.storage[lastId].success = 0;
-
-    show(lastId);
-    show(window.storage);
+   
 }
 
 function clickCheckbox(element) {
